@@ -5,7 +5,8 @@ const getGoals=(req,res)=>{
 const setGoals=(req,res)=>{
 
     if(!req.body.text){
-        res.status(400).json({message:'put valid text'});
+        res.status(400)
+        throw Error("Please put valid text");
 
     }
     res.status(200).json({message:'set goals'});
